@@ -4,6 +4,7 @@ const int WindowWidth = 400;
 const int WindowHeight = 800;
 
 int playerCounter = 0;
+int over = 0;
 
 struct Block {
     float x, y, width, height;
