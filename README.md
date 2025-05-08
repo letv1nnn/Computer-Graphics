@@ -16,3 +16,7 @@ C and C++
   “iPhone Island Game” is a simple arcade-style game where you control a paddle to bounce a ball upward and hit a floating block to score points.
   The game ends when the ball falls below the paddle, challenging players to keep it in play and aim for a high score. 
   code: https://github.com/letv1nnn/GAMES/blob/main/iPhoneIslandGame.cpp
+
+  ## Snake Game
+  This is a classic Snake game implemented in C++ using the Raylib graphics library, featuring keyboard-controlled movement, randomized food spawning, and collision detection with edges and the snake's tail. 
+  The game tracks score and resets on collision, offering a simple but complete retro arcade experience. code: https://github.com/letv1nnn/GAMES/blob/main/SnakeGame.cpp
