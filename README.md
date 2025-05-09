@@ -20,3 +20,9 @@ C and C++
   ## Snake Game
   This is a classic Snake game implemented in C++ using the Raylib graphics library, featuring keyboard-controlled movement, randomized food spawning, and collision detection with edges and the snake's tail. 
   The game tracks score and resets on collision, offering a simple but complete retro arcade experience. code: https://github.com/letv1nnn/GAMES/blob/main/SnakeGame.cpp
+
+  ## Space War (has bugs)
+  The player pilots a spaceship, shoots down falling asteroids with lasers, and earns points while avoiding asteroid impacts. 
+  The game features real-time movement, textured sprites, and simple collision-based scorekeeping for both the player and missed asteroids.
+  Game have some bugs with asteroids texture.
+  code: https://github.com/letv1nnn/GAMES/blob/main/SpaceWarGame.cpp
