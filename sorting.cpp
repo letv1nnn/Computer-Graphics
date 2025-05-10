@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <algorithm>
 
 const int WindowWidth = 800, WindowHeight = 500;
 const int BlockWidth = 10;
@@ -45,6 +46,13 @@ public:
 		blocks = nullptr;
 	}
 
+	void Update(std::vector<int>& array) {
+		int spacing = BlockWidth + 2;
+		for (int i = 0; i < size; i++) {
+			blocks[i] = Block(array[i], i * spacing);
+		}
+	}
+
 	Block* getBlocks() {
 		return blocks;
 	}
@@ -60,7 +68,7 @@ public:
 
 static void startVisualizing() {
 	InitWindow(WindowWidth, WindowHeight, "Sorting Visualizing");
-	SetTargetFPS(15);
+	SetTargetFPS(1);
 
 	std::srand(static_cast<unsigned>(std::time(nullptr)));
 
@@ -72,30 +80,29 @@ static void startVisualizing() {
 
 	Blocks blocks(vec);
 	int i = 0;
+	bool sorting = true;
 
 
 	while (!WindowShouldClose()) {
 		BeginDrawing();
 
 		ClearBackground(BLACK);
+		if (sorting) {
+			if (i < vec.size() - 1) {
+				int sm = i;
+				for (int j = i + 1; j < vec.size(); j++) {
+					if (vec[j] < vec[sm]) sm = j;
+				}
+				std::swap(vec[i], vec[sm]);
 
-		if (i < vec.size() - 1) {
-			int j = i, sm = i + 1;
-			while (j < vec.size()) {
-				if (vec[sm] > vec[j]) sm = j;
-				j++;
+				blocks.Update(vec);
+				blocks.DisplayBlocks(sm);
+
+				i += 1;
 			}
-			int temp = vec[i];
-			vec[i] = vec[sm];
-			vec[sm] = temp;
-
-			Blocks blocks(vec);
-			blocks.DisplayBlocks(sm);
-
-			i += 1;
+			else sorting = false;
 		}
 		else {
-			Blocks blocks(vec);
 			blocks.DisplayBlocks();
 		}
 
