@@ -1,4 +1,4 @@
-# 🎮 Graphical C++ Apps
+# Graphical C++ Apps
 Welcome to a collection of **graphical applications in C++**, showcasing:
 - **Algorithm visualizations**
 - **2D game prototypes**
