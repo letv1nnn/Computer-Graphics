@@ -1,8 +1,3 @@
-# Graphical C/C++ Apps
-Welcome to a collection of **graphical applications in C++**, showcasing:
-- **Algorithm visualizations**
-- **2D game prototypes**
-- Real-time graphics using **Raylib**, **OpenGL** and maybe more
+# Computer Graphics
 
-This project is ideal for learning how to combine **core C++ logic** with **interactive visuals** using modern graphics libraries.
-
+This repository contains my research in computer graphichs primarily with ***OpenGL***. I have tried ***Raylib*** to understand some fundamentals and write some fun programs. Mostly, I contributed into OpenGL directory, which is based on my own research and some books.
