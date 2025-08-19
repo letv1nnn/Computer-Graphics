@@ -190,3 +190,7 @@ someOpenGLFunctionThatDrawsOurTriangle();
 
 ![triangle](basic_opengl_images/triangle.png)
 
+
+Then, to form a square, I've build it from two triangles and used ***wireframe mode***, so the wireframe rectangle shows that the rectangle indeed consists of two triangles.
+
+![sqaure](basic_opengl_images/square.png)
